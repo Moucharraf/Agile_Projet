@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="SignUp.css">
+<body>
+    <div class="centre">
+        <h1>Creer un compte</h1>
+
+        <form method="post" action="">
+
+            <div class="fieldText">
+                <input type="text" required name="nomUtilisateur">
+                <span></span>
+                <label>Nom</label>
+            </div>
+
+            <div class="fieldText">
+                <input type="text" required name="prenomUtilisateur">
+                <span></span>
+                <label>Prenom</label>
+           </div>
+
+           <div class="fieldText">
+                <input type="date" required name="date_n">
+                <span></span>
+                <label>Date de naissance</label>
+            </div>
+
+            <div class="fieldText">
+                <input type="text" required name="pays">
+                <span></span>
+                <label>Pays de residence</label>
+            </div>
+
+            <div class="fieldText">
+                <input type="email" required name="mail">
+                <span></span>
+                <label>Email</label>
+            </div>
+
+            <div class="fieldText">
+                <input type="password" required name="motDePasse">
+                <span></span>
+                <label>Mot de passe</label>
+            </div>
+
+            <div class="genre">
+                Sexe: <br>
+                <label for="sexe">Homme</label>
+                <input type="radio"  required name="sexe" value="Homme">
+                <label for="sexe">Femme</label>
+                <input type="radio" required name="sexe" value="Femme">
+            </div>
+
+            <input type="submit" value="S'inscrire" name="login">
+
+            <div class="inscription">
+                Vous avez deja un compte? <br>
+                <a href="SignIn.html">Se connecter</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

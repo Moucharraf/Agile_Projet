@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Page d'authentification</title>
+        <link rel="stylesheet" href="SignIn.css">
+    </head>
+
+    <body>
+        <div class="centre">
+            <h1>Connexion</h1>
+
+            <form method="post" action="">
+
+                <div class="fieldText">
+                     <input type="text" required name="nomUtilisateur">
+                     <span></span>
+                     <label>Nom d'utilisateur</label>
+                </div>
+
+                <div class="fieldText">
+                    <input type="password" required name="motDePasse">
+                    <span></span>
+                    <label>Mot de passe</label>
+                </div>
+
+                <div class="passwordOublie">Mot de passe oublié ?</div>
+
+                <input type="submit" value="Se connecter" name="login">
+
+                <div class="inscription">
+                    Vous n'avez pas de compte? <br>
+                    <a href="SignUp.html">Créer un compte</a>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
