@@ -11,19 +11,27 @@ catch(PDOException $e){
     echo "Echec de la connexion :" . $e->getMessage();
 }
 
-/*
 $nom = $_POST['nomUtilisateur'];
 $prenom = $_POST['prenomUtilisateur'];
 $date = $_POST['date_n'];
 $pays = $_POST['pays'];
 $email = $_POST['mail'];
-$password = $_POST['motDePasee'];
+$password = $_POST['motDePasse'];
 $genre = $_POST['sexe'];
-*/
 
-$sql = "INSERT INTO client(IdClient,Nom,Prenom,Pays,Email,MotDePasse,Sexe) VALUES(1,'test','test1','tunisie','test@gmail.com','testt','masculin')";
+$sql = "INSERT INTO client(IdClient,Nom,Prenom,Date_Naissance,Pays,Email,MotDePasse,Sexe) VALUES(:IdClient,:Nom,:Prenom,:Date_Naissance,:Pays,:Email,:MotDePasse,:Sexe)";
 $requete = $con->prepare($sql);
-$requete->execute();
-$con=NULL;
+$requete->execute([
 
+    'IdClient'=>1,
+    'Nom'=>$nom,
+    'Prenom'=>$prenom,
+    'Date_Naissance'=>$date,
+    'Pays'=>$pays,
+    'Email'=>$email,
+    'MotDePasse'=>$password,
+    'Sexe'=>$genre,
+
+]);
+$con=NULL;
 ?>
