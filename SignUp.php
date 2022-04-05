@@ -30,11 +30,10 @@ foreach($elements as $element){
 }
 
 if($test==0){
-    $sql = "INSERT INTO client(IdClient,Nom,Prenom,Date_Naissance,Pays,Email,MotDePasse,Sexe) VALUES(:IdClient,:Nom,:Prenom,:Date_Naissance,:Pays,:Email,:MotDePasse,:Sexe)";
+    $sql = "INSERT INTO client(Nom,Prenom,Date_Naissance,Pays,Email,MotDePasse,Sexe) VALUES(:Nom,:Prenom,:Date_Naissance,:Pays,:Email,:MotDePasse,:Sexe)";
     $requete = $con->prepare($sql);
     $requete->execute([
 
-        'IdClient'=>1,
         'Nom'=>$nom,
         'Prenom'=>$prenom,
         'Date_Naissance'=>$date,
