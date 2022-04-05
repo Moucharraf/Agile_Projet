@@ -19,19 +19,35 @@ $email = $_POST['mail'];
 $password = $_POST['motDePasse'];
 $genre = $_POST['sexe'];
 
-$sql = "INSERT INTO client(IdClient,Nom,Prenom,Date_Naissance,Pays,Email,MotDePasse,Sexe) VALUES(:IdClient,:Nom,:Prenom,:Date_Naissance,:Pays,:Email,:MotDePasse,:Sexe)";
-$requete = $con->prepare($sql);
-$requete->execute([
+$test=0;
+$sql1="SELECT * FROM client";
+$elementsTable=$con->prepare($sql1);
+$elementsTable->execute();
+$elements=$elementsTable->fetchAll();
+foreach($elements as $element){
+    if($element['Email']==$email){
+        $test=1;
+    }
+}
 
-    'IdClient'=>1,
-    'Nom'=>$nom,
-    'Prenom'=>$prenom,
-    'Date_Naissance'=>$date,
-    'Pays'=>$pays,
-    'Email'=>$email,
-    'MotDePasse'=>$password,
-    'Sexe'=>$genre,
+if($test==0){
+    $sql = "INSERT INTO client(IdClient,Nom,Prenom,Date_Naissance,Pays,Email,MotDePasse,Sexe) VALUES(:IdClient,:Nom,:Prenom,:Date_Naissance,:Pays,:Email,:MotDePasse,:Sexe)";
+    $requete = $con->prepare($sql);
+    $requete->execute([
 
-]);
+        'IdClient'=>1,
+        'Nom'=>$nom,
+        'Prenom'=>$prenom,
+        'Date_Naissance'=>$date,
+        'Pays'=>$pays,
+        'Email'=>$email,
+        'MotDePasse'=>$password,
+        'Sexe'=>$genre,
+
+    ]);
+}
+else{
+    echo "Vous avez deja un compte existant";
+}
 $con=NULL;
 ?>
