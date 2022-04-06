@@ -1,0 +1,114 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+
+#siteweb{
+    background: url(back.jpg);
+    background-size: cover;
+    background-repeat: 1;
+    height: 630px;
+    width: 1100px;
+    margin-left: 240px;
+    margin-top: 80px;
+    border-top-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+}
+#h1{
+    padding-left: 400px;
+    color: #A77878;
+    font-size: 50px;
+    padding-top: 50px;
+    padding-left: 475px;
+}
+#h2{
+    padding-left: 310px;
+    color: #A77878;
+    font-size: 30px;
+}
+#mail{
+    margin-left: 400px;
+    font-size: 20px;
+    width: 300px;
+    height: 50px;
+    border-radius: 10px;
+    padding-left: 70px;
+    position: relative;
+    border: 1px solid black;
+}
+#nouveauxpassword{
+        
+        font-size: 20px;
+        width: 300px;
+        height: 50px;
+        border-radius: 10px;
+        padding-left: 70px;
+        position: relative;
+        border: 1px solid black;
+}
+#confirmerpassword{
+    margin-left: 400px;
+    font-size: 20px;
+    width: 300px;
+    height: 50px;
+    border-radius: 10px;
+    padding-left: 70px;
+    position: relative;
+    margin-top: 30px;
+    border: 1px solid black;
+}
+#confirmer,#annuler{
+    font-size: 15px;
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
+    position: relative;
+    left: 420px;
+    margin-top: 50px;
+    margin-left: 10px;
+    border: 1px solid black;
+
+}
+.fa-envelope{
+    position: absolute;
+    padding-left: 130px;
+    top: 315px;
+    left: 530px;
+    font-size: 30px;
+    color:rgb(115,171,186);
+}
+.fa-lock{
+    position: absolute;
+    top: 400px;
+    left: 660px;
+    font-size: 30px;
+    color :rgb(115,171,186)
+}
+.far{
+    position: absolute;
+    top: 400px;
+    left: 950px;
+    font-size: 30px;
+    color:rgb(115,171,186)
+}
+#iconlock{
+    position: absolute;
+    padding-left: 410px;
+    top: 480px;
+    left: 250px;
+    font-size: 30px;
+}
+#iconeye{
+    position: absolute;
+    padding-left: 410px;
+    top: 485px;
+    left: 540px;
+    font-size: 30px;
+}
+.password{
+    margin-left: 400px;
+    margin-top: 30px;
+}
+/*.conficpass{
+    margin-top: 5px;
+}*/
