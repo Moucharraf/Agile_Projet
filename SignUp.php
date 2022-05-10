@@ -45,7 +45,7 @@ if($test==0){
     ]);
 }
 else{
-    echo "Vous avez deja un compte existant";
+    echo "<p>Il existe déjà un compte avec la meme adresse mail</p>";
 }
 $con=NULL;
 ?>
